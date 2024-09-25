@@ -1,0 +1,74 @@
+---
+import Card from "./Card.astro"
+import Section from "./Section.astro"
+---
+
+<Section
+  title="Servicios"
+  color="black"
+  id="model-y"
+  
+>
+
+
+<div slot="footer" class="gap-x-6 flex mx-auto flex-col items-center">
+  <!-- Contenido de servicios en un layout de puzzle -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto mt-8 max-w-5xl w-full px-4 lg:px-0">
+    <div class="bg-white bg-opacity-10 p-8 border border-gray-300 rounded-lg shadow-md text-black">
+      <h4 class="font-semibold mb-2 text-lg">Instalación</h4>
+      <ul class="list-disc ml-5">
+        <li>Tarima Flotante.</li>
+        <li>Tarima Clásica y de Exteriores.</li>
+        <li>Pavimentos Laminados.</li>
+        <li>Parquets</li>
+      </ul>
+    </div>
+
+    <div class="bg-white bg-opacity-10 p-8 border border-gray-300 rounded-lg shadow-md text-black">
+      <h4 class="font-semibold mb-2 text-lg">Diseño</h4>
+      <p>Realizamos trabajos especiales para clientes que desean una disposición original de su suelo con un diseño personalizado y tipos de madera diferentes.</p>
+    </div>
+
+    <div class="bg-white bg-opacity-10 p-8 border border-gray-300 rounded-lg shadow-md text-black">
+      <h4 class="font-semibold mb-2 text-lg">Lijado y Barnizado, Pulido y Abrillantado</h4>
+      <p>Usamos maquinaria moderna y barnices avanzados para realizar el trabajo. También ofrecemos pulido y abrillantado de pavimentos de terrazo o mármol.</p>
+    </div>
+
+    <div class="bg-white bg-opacity-10 p-8 border border-gray-300 rounded-lg shadow-md text-black">
+      <h4 class="font-semibold mb-2 text-lg">Restauración, Venta y Distribución</h4>
+      <p>Reparamos desperfectos y restauramos suelos de madera fuera de comercio. Suministramos tarimas, pavimentos, parquets y productos de limpieza tanto para particulares como profesionales.</p>
+    </div>
+  </div>
+</div>
+
+  <img
+    slot="background"
+    alt="Model Y"
+    class="h-full w-full object-cover object-center bg-image"
+    src="f_3.jpg"
+    id="bg-image-modely"
+  />
+</Section>
+
+<script>
+  function isEdge() {
+    if (
+      navigator.userAgent.indexOf("Edge") > -1 ||
+      navigator.userAgent.indexOf("Edg") > -1
+    ) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  let imageElement = document.querySelector(
+    "#bg-image-modely"
+  ) as HTMLImageElement
+
+  /*if (isEdge()) {
+    imageElement.src = "model-y.webp"
+  } else {
+    imageElement.src = "model-y.avif"
+  }*/
+</script>

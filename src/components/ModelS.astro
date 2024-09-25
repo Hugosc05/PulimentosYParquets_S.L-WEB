@@ -1,0 +1,64 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section
+  title="Sobre Nosotros"
+  subtitle="Un poco de nuestra historia"
+  color="black"
+  id="model-s"
+>
+<div slot="footer" class="gap-x-6 flex mx-auto flex-col items-center">
+  <!-- Contenido de la sección "Sobre Nosotros" en dos columnas -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto mt-8 max-w-5xl w-full px-4 lg:px-0">
+    
+    <!-- Primer recuadro: Historia de la Empresa -->
+    <div class="bg-white bg-opacity-10 p-8 border border-gray-300 rounded-lg shadow-md text-black">
+      <h4 class="font-semibold mb-2 text-lg">Nuestra Historia</h4>
+      <p>
+        Pulimentos y Parquets es una empresa con más de 50 años de trayectoria en la instalación, suministro y restauración de pavimentos de madera y laminados. Además, ofrece productos especializados para la limpieza y mantenimiento de suelos de madera, terrazo y mármol. Fundada como una continuidad del esfuerzo del pionero Marino Sastre en Segovia, la empresa cuenta con profesionales altamente cualificados que ofrecen soluciones integrales para sus proyectos.
+      </p>
+    </div>
+
+    <!-- Segundo recuadro: Filosofía / Cómo Trabajamos -->
+    <div class="bg-white bg-opacity-10 p-8 border border-gray-300 rounded-lg shadow-md text-black">
+      <h4 class="font-semibold mb-2 text-lg">Nuestra Filosofía</h4>
+      <ul class="list-disc ml-5">
+        <li class="mb-4"><strong>Calidad:</strong> Nos aseguramos de que cada pieza de madera cumpla con los más altos estándares.</li>
+        <li class="mb-4"><strong>Compromiso:</strong> Mantenemos un firme compromiso con la satisfacción de nuestros clientes y la sostenibilidad en todos nuestros procesos.</li>
+        <li><strong>Seriedad:</strong> Actuamos con profesionalismo y responsabilidad en cada proyecto, garantizando resultados confiables y de largo plazo.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+  <img
+    slot="background"
+    alt="Model S"
+    class="h-full w-full object-cover object-center"
+    src="f_2.jpg"
+    id="bg-image-models"
+  />
+</Section>
+
+<script>
+  function isEdge() {
+    if (
+      navigator.userAgent.indexOf("Edge") > -1 ||
+      navigator.userAgent.indexOf("Edg") > -1
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let imageElement = document.querySelector("#bg-image-models") as HTMLImageElement; // TypeScript
+
+  /*if (isEdge()) {
+    imageElement.src = "model-s.webp";
+  } else {
+    imageElement.src = "model-s.avif";
+  }*/
+</script>
